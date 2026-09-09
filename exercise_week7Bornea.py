@@ -1,0 +1,37 @@
+"""
+Week 7 : Data Serialization - Convert Network Configs
+=======================================================
+
+Your task: Convert a network device config between JSON and YAML.
+
+FILL IN THE BLANKS marked with ______
+Run this script when done: python3 exercise_week7.py
+"""
+import json
+import yaml
+
+#===========================================================================
+# This is a network device configuration in Python (dictionary)
+#===========================================================================
+
+router_config = {
+    "hostname": "Router-1",
+    "vendor": "Cisco",
+    "interfaces": [
+        {"name": "GigabitEthernet01", "ip": "192.168.1.1", "status": "up"},
+        {"name": "GigabitEthernet02", "ip": "10.0.0.1", "status": "up"},
+        {"name": "GigabitEthernet03", "ip": "172.16.0.1", "status": "down"}
+    ]
+}
+
+#===========================================================================
+# EXERCISE 1: Convert Python dict -> JSON
+#===========================================================================
+#Hint: Convert a python dict to a JSON String
+
+print("=== EXERCISE 1: Convert to JSON ===")
+#json_output = json._____(router_config, indent=2)
+json_output = json.dumps(router_config, indent=2)
+
+print(json_output)
+print()
