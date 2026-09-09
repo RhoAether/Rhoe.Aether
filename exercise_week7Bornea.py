@@ -101,3 +101,10 @@ with open("router_config_updated.json", "w") as f:
 print(f"Added new interface: {new_interface['name']}")
 print(f"Total interfaces now: {len(router_config['interfaces'])}")
 print()
+
+print("=" * 50)
+print("Exercise Complete! Check your Files:")
+print("   - router_config.json")
+print("   - router_config.yaml")
+print("   - updated_config.json")
+print("=" * 50)
