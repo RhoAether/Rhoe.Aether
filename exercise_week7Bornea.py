@@ -80,3 +80,24 @@ with open("router_config.yaml", "w") as f:
 
 print("Saved to router_config.yaml!")
 print()
+
+#===========================================================================
+# EXERCISE 5: CHALLENGE - Modify and save
+#===========================================================================
+
+print("=== EXERCISE 5: CHALLENGE - Modify and save ===")
+
+#Add a new interface (LoopBack0)
+new_interface = {"name": "LoopBack0", "ip": "1.1.1.1", "status": "up"}
+
+#FILL IN THE BLANK: append the new interface to the list
+#router_config["__________"].______(new_interface) 
+router_config["interfaces"].append(new_interface)
+
+#Save updated config
+with open("router_config_updated.json", "w") as f:
+    json.dump(router_config, f, indent=2)
+
+print(f"Added new interface: {new_interface['name']}")
+print(f"Total interfaces now: {len(router_config['interfaces'])}")
+print()
